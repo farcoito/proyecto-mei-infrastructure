@@ -1,22 +1,21 @@
-proyecto-mei-infrastructure
-proyecto M.E.I.A. Macro-Infraestructura Empresarial Inmutable y Automatizada
+¡Hola! Bienvenido a este repositorio. Este es mi espacio personal de experimentación y aprendizaje, el Proyecto M.E.I.A. Lo he montado desde cero con mis propios recursos para experimentar de primera mano cómo funciona una infraestructura de sistemas real y prepararme a fondo para el segundo curso de ASIR.
 
-Este repositorio contiene la documentación, planos lógicos, manifiestos de Infraestructura como Código (IaC) y scripts de automatización para el despliegue del entorno corporativo avanzado M.E.I.A., diseñado como preparación para el segundo bloque del ciclo superior de ASIR.
+🖥️ El "Hierro" (Mi laboratorio físico)
+Me gusta trastear con hardware real, así que tengo montado en mi escritorio un clúster de tres nodos Lenovo ThinkCentre Tiny:
 
-Bloque 1: Inicialización del Hierro y Virtualización Base (Completado)
+Mila: 16 GB de RAM y un NVMe de 250 GB (el nodo principal).
 
-En este primer bloque se ha preparado el nodo de cómputo físico base y se ha estabilizado el entorno del hipervisor para los despliegues posteriores.
+randun: 8 GB de RAM y un SSD de 250 GB. Le tengo conectado por USB 3.0 un disco duro externo Western Digital de 480 GB para las copias de seguridad con Proxmox Backup Server (PBS).
 
-Ficha Técnica del Hardware (Nodo 'uno')
-Hardware:Lenovo ThinkCentre M920q Tiny (USFF)
-Procesador: Intel Core i5-8500T (6 núcleos reales)
-Memoria RAM: 8 GB DDR4 (Base)
-Almacenamiento: 240 GB NVMe M.2
-Hipervisor: Proxmox VE 9.2.3 (Bare-Metal Tipo 1)
+Gumball: 16 GB de RAM y un SSD de 480 GB.
 
-Desafíos Técnicos y Soluciones Aplicadas
+La Red: Todo el tráfico pasa por un switch Aruba 1930 y gestiono las VLANs con un router MikroTik AX3. El router de la operadora (Movistar) lo uso únicamente como pasarela de salida a internet.
 
-1 Topología de Red Temporal (Puente de Red):Debido a restricciones físicas temporales de espacio, el nodo `uno` se configuró inicialmente mediante un puente de red Ethernet Cat 6e conectado a una laptop auxiliar para heredar conectividad y permitir el aprovisionamiento inicial por DHCP.
-2.Estabilización de Repositorios APT (Licenciamiento):Se solventó el error de suscripción corporativa (`pve-enterprise`) que provocaba fallos de autenticación (código 401 Unauthorized). Se desactivaron los repositorios de pago y se inyectaron las listas comunitarias de producción gratuita `No-Subscription`. El sistema se encuentra 100% actualizado y libre de alertas de dependencias.
+🧭 ¿Cuál es la idea de todo esto?
+Mi objetivo no es buscar la perfección teórica, sino enfrentarme a los problemas reales que surgen al levantar servicios, configurar redes, virtualizar y automatizar tareas. Es donde vengo a practicar lo que voy estudiando.
 
-Las evidencias gráficas del panel de control de Proxmox totalmente actualizado y estabilizado se encuentran alojadas en la carpeta `/docs`.
+⚠️ Nota mental muy importante
+Quiero dejar claro que esto no es un proyecto acabado ni perfecto.
+Vivo en un bucle constante y divertido de: aprender ➡️ montar ➡️ romper ➡️ solucionar ➡️ y volver a empezar.
+
+Cada día me equivoco, descubro cosas nuevas y sigo mejorando el sistema poco a poco. ten en cuenta que es un entorno vivo de aprendizaje constante. ¡Seguimos sumando y mejorando cada día!
